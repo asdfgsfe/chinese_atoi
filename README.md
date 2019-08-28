@@ -1,2 +1,2 @@
-# chinese-atoi
+# chinese_atoi
 chinese atoi
