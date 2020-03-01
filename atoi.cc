@@ -13,7 +13,7 @@ static unordered_map<string, int> g_uints = {
 static unordered_map<string, int> g_numbers = {
 	{ "九", 9 },{ "八", 8 },{ "七", 7 },{ "六", 6 },{ "五", 5 },{ "四", 4 },{ "三", 3 },{ "二", 2 },{ "一", 1 },{ "零", 0 } };
 
-bool g_invaildInput = false;
+__thread bool g_invaildInput = false;
 
 //思路非常简单就是从右至左分析中文的数字,遇到'位'计记录下来,
 //非'位'就乘以位并加入到结果result中.firstUnit单表第一级位,second代表二级位,
@@ -57,7 +57,7 @@ long long CvrProcess(const string& cnum, int end, bool minus)
 	return num;
 }
 
-//多于两个单位连一起的情况 特殊字符等
+//多于两个单位连一起的情况 特殊字符等 不用处理了 一二级单位方法 已经处理了
 int Atoi(const string& str)
 {
 	g_invaildInput = true;
